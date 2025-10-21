@@ -27,6 +27,6 @@ jobs:
 
     - uses: ./ext/rusefi/.github/workflows/custom-board-build
       with:
-        artifacts: bin srec hex list map elf
+        artifacts: bin srec hex list map elf bundle
         uploads: ""
         push: "false"
