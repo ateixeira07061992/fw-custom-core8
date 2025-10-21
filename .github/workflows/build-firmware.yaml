@@ -2,7 +2,7 @@ name: Create Board Firmware
 
 on:
   schedule:
-    - cron: '10 17 * * *' # build fresh every 5:10 PM
+    - cron: '10 17 * * *'
   push:
   pull_request:
   workflow_dispatch:
@@ -18,7 +18,7 @@ jobs:
     - name: Build firmware (verbose)
       uses: ./ext/rusefi/.github/workflows/custom-board-build
       with:
-        board: core8
+        BOARDS: core8
         artifacts: bin srec hex list map elf bundle
         uploads: ""
         push: "false"
