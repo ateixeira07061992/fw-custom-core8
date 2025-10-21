@@ -15,12 +15,13 @@ jobs:
       with:
         submodules: true
 
-    - name: Build firmware
+    - name: Build firmware (verbose)
       uses: ./ext/rusefi/.github/workflows/custom-board-build
       with:
         artifacts: bin srec hex list map elf bundle
         uploads: ""
         push: "false"
+        verbose: "true"
 
     - name: Upload firmware artifacts
       uses: actions/upload-artifact@v4
